@@ -1,0 +1,19 @@
+# Python キャッシュ
+__pycache__/
+*.py[cod]
+
+# Jupyter チェックポイント
+.ipynb_checkpoints/
+
+# 仮想環境
+venv/
+.venv/
+env/
+
+# ログ・一時ファイル
+*.log
+*.tmp
+
+# OS 一時ファイル
+.DS_Store
+Thumbs.db

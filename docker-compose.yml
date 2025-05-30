@@ -1,0 +1,21 @@
+services:
+  abeja-qwen7b:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: abeja-qwen7b
+    runtime: nvidia
+    container_name: abeja-qwen7b
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app/abeja-qwen7b
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: >
+      bash -c '/usr/local/bin/ollama serve & /app/.venv/bin/jupyter lab --ip="*" --port=8888 --NotebookApp.token="" --NotebookApp.password="" --no-browser --allow-root'
