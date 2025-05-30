@@ -1,4 +1,4 @@
-## VS Code からリモート GPU インスタンスへ接続する場合
+## VS Code からリモート GPU インスタンスへ接続
 
 `.ssh/config` に次のブロックを追加しておくと、  
 VS Code の **Remote-SSH** 拡張機能からワンクリックで  
@@ -31,10 +31,8 @@ docker compose up           # -d を付けるとバックグラウンド起動
 
 ## Jupyter Lab の利用
 
-1. `.ssh/config` で転送設定済みなら VS Code Remote-SSH で接続、
-   ローカル実行ならそのままブラウザを開きます。
-2. アドレスバーに **[http://localhost:8888/](http://localhost:8888/)** と入力。
-3. `demo.ipynb` を開き、セルを上から順に実行して
+1. アドレスバーに **[http://localhost:8888/](http://localhost:8888/)** と入力。
+2. `demo.ipynb` を開き、セルを上から順に実行して
   ABEJA-Qwen2.5-7b-Japanese-v0.1 の推論を行います。
 
 ## ファイル構成
@@ -53,7 +51,7 @@ docker compose up           # -d を付けるとバックグラウンド起動
 | 対象 | ライセンス | 備考 |
 |------|-----------|------|
 | ABEJA-Qwen2.5-7b-Japanese-v0.1 モデル | Apache License 2.0 | 詳細は <https://huggingface.co/abeja/ABEJA-Qwen2.5-7b-Japanese-v0.1/blob/main/LICENSE> を参照 |
-| Qwen/Qwen2.5 ベースモデル | Apache License 2.0 | Alibaba Cloud が公開する Qwen 系列モデルのライセンス |
+| Qwen/Qwen2.5 ベースモデル | Apache License 2.0 | Alibaba が公開する Qwen 系列モデルのライセンス |
 
 > **注意**  
 > - モデルを商用利用する場合は **Apache-2.0** の条項に従ってください。  
