@@ -4,9 +4,6 @@ FROM nvidia/cuda:12.1.0-cudnn8-devel-ubuntu22.04
 # 必要なパッケージをインストール
 RUN apt-get update && apt-get install -y python3-pip python3-venv git nano curl
 
-# Ollamaをインストール
-RUN curl -fsSL https://ollama.com/install.sh | sh
-
 # 作業ディレクトリを設定
 WORKDIR /app
 
