@@ -9,7 +9,7 @@ Host sample                 # 任意のホスト名
     HostName <インスタンスのIP>      # 例: 203.0.113.10
     Port 10022                   # インスタンス側 SSH ポート
     User buser                   # リモートのユーザー名
-    IdentityFile ~/.ssh/ackey.txt    # 秘密鍵 (ローカルパス)
+    IdentityFile .ssh/secretkey.txt    # 秘密鍵 (ローカルパス)
     ProxyCommand C:/Windows/System32/OpenSSH/ssh.exe ^
         -W %h:%p -i ~/.ssh/ackey.txt -p 30022 user@as-highreso.com
     LocalForward 8888 localhost:8888   # Jupyter Lab をローカル 8888 に転送
